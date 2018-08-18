@@ -43,10 +43,16 @@ public class ListingPageController {
         }
     }
 
-    @GetMapping(value = "/load-hotels")
-    public ResponseEntity loadHotelsData() {
+    /**
+     * This method loads and returns the whole unsorted data for the city.
+     * Not a requirement for assignment. Used for testing.
+     *
+     * @return
+     */
+    @GetMapping(value = "/load-hotels/{location_id}")
+    public ResponseEntity loadHotelsData(@PathVariable Integer location_id) {
         try {
-            CityDataModel response = dataLoader.loadHotelList("Galactic center");
+            CityDataModel response = dataLoader.loadHotelList(location_id);
             return new ResponseEntity(response.toString(),HttpStatus.OK);
         } catch (FileReadException fileReadException) {
             return new ResponseEntity(fileReadException.getMessage(),HttpStatus.OK);

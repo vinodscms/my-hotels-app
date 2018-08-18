@@ -36,8 +36,8 @@ public class DataLoader {
      * @return
      * @throws FileReadException
      */
-    public CityDataModel loadHotelList(String city) throws FileReadException {
-        logger.info("Loading hotels for " + city + " city" );
+    public CityDataModel loadHotelList(Integer locationId) throws FileReadException {
+        logger.info("Entering Load data method" );
 
         ObjectMapper mapper = new ObjectMapper();
         CityDataModel cityData = null;
@@ -55,6 +55,7 @@ public class DataLoader {
             throw new FileReadException("The data loader failed to fetch the hotel list");
         }
 
+        logger.info("Loaded hotels for " + cityData.name + " city" );
         return cityData;
     }
 }

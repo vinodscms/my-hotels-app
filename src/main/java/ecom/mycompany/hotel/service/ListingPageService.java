@@ -38,7 +38,7 @@ public class ListingPageService {
         CityDataModel cityDetails;
         List<HotelDataModel> hotelsList = new ArrayList<>();
         try {
-            cityDetails = dataLoader.loadHotelList(request.location_id);
+            cityDetails = dataLoader.loadHotelList(new Integer(request.location_id));
             hotelsList = cityDetails.getHotels();
 
             logger.info("Sorting by " + request.search_criteria+" in " + request.sort_option);

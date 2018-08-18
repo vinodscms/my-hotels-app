@@ -22,7 +22,7 @@ Actuator        - http://localhost:8083/actuator/health
 ## Application URL
 http://localhost:8083/hotels/hotels-listing
 
-###Sample requests
+### Sample requests
 {
 	"location_id" : "1",
 	"search_criteria" : "name",
