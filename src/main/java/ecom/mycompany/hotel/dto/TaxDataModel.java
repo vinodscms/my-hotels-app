@@ -2,6 +2,11 @@ package ecom.mycompany.hotel.dto;
 
 import java.math.BigDecimal;
 
+/**
+ * This Class is the mapping class for Tax Object and json
+ *
+ * @author Vinod
+ */
 public class TaxDataModel {
 
     public String name;

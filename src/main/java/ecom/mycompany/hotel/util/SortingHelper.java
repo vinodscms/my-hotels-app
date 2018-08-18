@@ -4,6 +4,11 @@ import org.springframework.stereotype.Service;
 
 import java.util.Comparator;
 
+/**
+ * This Class is the library for sorting algorithms
+ *
+ * @author Vinod
+ */
 @Service
 public class SortingHelper {
 
@@ -57,6 +62,8 @@ public class SortingHelper {
         }
         return items;
     }
+
+
 
     /*private static <T> void swap(T[] x, int a, int b) {
         T t = x[a];

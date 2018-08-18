@@ -3,6 +3,11 @@ package ecom.mycompany.hotel.dto;
 import java.math.BigDecimal;
 import java.util.List;
 
+/**
+ * This Class is the mapping class for City Object and json
+ *
+ * @author Vinod
+ */
 public class CityDataModel {
 
     public Integer location_id;

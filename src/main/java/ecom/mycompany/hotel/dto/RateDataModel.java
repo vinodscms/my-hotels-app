@@ -2,6 +2,11 @@ package ecom.mycompany.hotel.dto;
 
 import java.math.BigDecimal;
 
+/**
+ * This Class is the mapping class for Base Rate Object and json
+ *
+ * @author Vinod
+ */
 public class RateDataModel {
 
     public BigDecimal base_price;

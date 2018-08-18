@@ -1,5 +1,10 @@
 package ecom.mycompany.hotel.dto;
 
+/**
+ * This Class is the mapping class for User Rating Object and json
+ *
+ * @author Vinod
+ */
 public class UserRatingDataModel {
 
     public String user_id;

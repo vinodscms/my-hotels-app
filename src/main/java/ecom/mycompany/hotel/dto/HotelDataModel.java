@@ -3,6 +3,11 @@ package ecom.mycompany.hotel.dto;
 import java.math.BigDecimal;
 import java.util.List;
 
+/**
+ * This Class is the mapping class for Hotel Object and json
+ *
+ * @author Vinod
+ */
 public class HotelDataModel {
 
     public String name;

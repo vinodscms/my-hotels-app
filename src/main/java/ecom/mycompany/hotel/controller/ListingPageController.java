@@ -1,6 +1,7 @@
 package ecom.mycompany.hotel.controller;
 
 import ecom.mycompany.hotel.dto.CityDataModel;
+import ecom.mycompany.hotel.dto.HotelDataModel;
 import ecom.mycompany.hotel.exception.FileReadException;
 import ecom.mycompany.hotel.mapper.ListingPageRequest;
 import ecom.mycompany.hotel.service.DataLoader;
@@ -9,6 +10,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * REST Controller for the Hotels landing page
@@ -30,21 +33,20 @@ public class ListingPageController {
         return "Application is up and running";
     }
 
-    @GetMapping(value = "/load-hotels")
-    public ResponseEntity loadHotelsData() {
+    @PostMapping(value="/hotels-listing")
+    public ResponseEntity getHotelListing(@RequestBody ListingPageRequest request) {
         try {
-            CityDataModel response = dataLoader.loadHotelList("Galactic center");
-            return new ResponseEntity(response.toString(),HttpStatus.OK);
+            List<HotelDataModel> response = listingPageService.returnHotelList(request);
+            return new ResponseEntity(response,HttpStatus.OK);
         } catch (FileReadException fileReadException) {
             return new ResponseEntity(fileReadException.getMessage(),HttpStatus.OK);
         }
     }
 
-    @PostMapping(value="/hotels-listing")
-    public ResponseEntity getHotelListing(@RequestBody ListingPageRequest request) {
-        //return new ResponseEntity(, HttpStatus.OK);
+    @GetMapping(value = "/load-hotels")
+    public ResponseEntity loadHotelsData() {
         try {
-            String response = listingPageService.returnHotelList(request);
+            CityDataModel response = dataLoader.loadHotelList("Galactic center");
             return new ResponseEntity(response.toString(),HttpStatus.OK);
         } catch (FileReadException fileReadException) {
             return new ResponseEntity(fileReadException.getMessage(),HttpStatus.OK);
