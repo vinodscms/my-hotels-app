@@ -48,7 +48,7 @@ public class ListingPageService {
             long startTime = System.currentTimeMillis();
             switch (request.search_criteria) {
                 case "distance": {
-                    //Using Bubble Sort from library for name
+                    //Using Bubble Sort from library for sorting distance
                     CoordinateDataModel cityLocation = new CoordinateDataModel(cityDetails.location_x,
                             cityDetails.location_y,cityDetails.location_z);
                     hotelsList = Arrays.asList((HotelDataModel[])
@@ -58,7 +58,7 @@ public class ListingPageService {
                 break;
 
                 case "price": {
-                    //Using Collections merge sort for Price
+                    //Using Collection's merge sort for Price
                     hotelsList = cityDetails.getHotels();
                     sortWithPriceOption(hotelsList, request.sort_option);
                 }

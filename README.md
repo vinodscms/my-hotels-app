@@ -1,18 +1,25 @@
 # Hotel Application
 
-This application is created to simulate a sample hotel booking site with selected functionalities
+This application is created to simulate a sample hotel booking site with selected functionalities.
+Hotel listing page api functionalitites with following options to sort.
+
+	1. Sort by Distance
+	2. Sort by Price
+	3. Sort by Rating
+	4. Sort by Name
+
 
 ## How to build and execute
 
-Build Library using maven and java 1.8 -> https://github.com/vinodscms/sorting-artifacts
+1. Build the sortinglLibrary using maven and java 1.8 -> https://github.com/vinodscms/sorting-artifacts
 
-Build this application using maven and java 1.8
+2. Build this repository using maven and java 1.8
 
-Directly execute jar file
+3. Directly execute jar file in target folder
 
-java -jar hotels-app-0.0.1-SNAPSHOT.jar
+   java -jar hotels-app-1.0.jar
 
-Logs will be found in Root directory + /log/hotel-app.log
+4. Logs will be found in Console and Root directory + /log/hotel-app.log
 
 ## Health Check URLS
 Health Check    - http://localhost:8083/hotels/ping

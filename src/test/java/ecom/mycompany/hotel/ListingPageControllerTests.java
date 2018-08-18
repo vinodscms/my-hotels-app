@@ -54,6 +54,14 @@ public class ListingPageControllerTests {
                 new ListingPageRequest("1","name","asc");
         List<HotelDataModel> response = listingPageService.returnHotelList(listingPageRequest);
         Assert.assertNotNull(response);
+
+        //Test for the current input json. Remove when input set is expanded.
+        Assert.assertEquals(response.get(0).name,"aloft Caprica City Center");
+        listingPageRequest =
+                new ListingPageRequest("1","name","desc");
+        response = listingPageService.returnHotelList(listingPageRequest);
+        Assert.assertEquals(response.get(0).name,"Hyatt Place of Babylon 5");
+
     }
 
     @Test
@@ -62,6 +70,13 @@ public class ListingPageControllerTests {
                 new ListingPageRequest("1","distance","asc");
         List<HotelDataModel> response = listingPageService.returnHotelList(listingPageRequest);
         Assert.assertNotNull(response);
+
+        //Test for the current input json. Remove when input set is expanded.
+        Assert.assertEquals(response.get(0).name,"Hyatt Place of Babylon 5");
+        listingPageRequest =
+                new ListingPageRequest("1","distance","desc");
+        response = listingPageService.returnHotelList(listingPageRequest);
+        Assert.assertEquals(response.get(0).name,"DoubleTree of Manassas, Reach");
     }
 
     @Test
@@ -70,6 +85,13 @@ public class ListingPageControllerTests {
                 new ListingPageRequest("1","price","asc");
         List<HotelDataModel> response = listingPageService.returnHotelList(listingPageRequest);
         Assert.assertNotNull(response);
+
+        //Test for the current input json. Remove when input set is expanded.
+        Assert.assertEquals(response.get(0).name,"Bespin Level 1 at Cloud City");
+        listingPageRequest =
+                new ListingPageRequest("1","price","desc");
+        response = listingPageService.returnHotelList(listingPageRequest);
+        Assert.assertEquals(response.get(0).name,"DoubleTree of Manassas, Reach");
     }
 
     @Test
@@ -78,6 +100,13 @@ public class ListingPageControllerTests {
                 new ListingPageRequest("1","rating","asc");
         List<HotelDataModel> response = listingPageService.returnHotelList(listingPageRequest);
         Assert.assertNotNull(response);
+
+        //Test for the current input json. Remove when input set is expanded.
+        Assert.assertEquals(response.get(0).name,"Bespin Level 1 at Cloud City");
+        listingPageRequest =
+                new ListingPageRequest("1","rating","desc");
+        response = listingPageService.returnHotelList(listingPageRequest);
+        Assert.assertEquals(response.get(0).name,"aloft Caprica City Center");
     }
 
 }

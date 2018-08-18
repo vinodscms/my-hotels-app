@@ -5,7 +5,7 @@
 
 	<groupId>ecom.mycompany.hotel</groupId>
 	<artifactId>hotels-app</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<name>my-hotels-app</name>
@@ -28,7 +28,7 @@
 		<dependency>
 			<groupId>ecom.mycompany.library</groupId>
 			<artifactId>sorting-artifacts</artifactId>
-			<version>1.0-SNAPSHOT</version>
+			<version>1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
